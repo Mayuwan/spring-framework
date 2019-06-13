@@ -61,6 +61,7 @@ public abstract class BeanDefinitionReaderUtils {
 		bd.setParentName(parentName);
 		if (className != null) {
 			if (classLoader != null) {
+				//利用反射创建beanClass
 				bd.setBeanClass(ClassUtils.forName(className, classLoader));
 			}
 			else {
